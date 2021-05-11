@@ -41,7 +41,7 @@ def cron_job():
         response = requests.get(url, headers={
             "accept": "application/json",
             "Accept-Language": "hi_IN",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
         })
         if response.status_code != 200:
             print("Invalid response")
