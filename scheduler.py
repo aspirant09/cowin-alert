@@ -43,8 +43,15 @@ def cron_job():
             "Accept-Language": "hi_IN",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36"
         })
+        if response.status_code != 200:
+            print("Invalid response")
+            return
         print(response.json())
-        centres=response.json()['centers']
+        centres=[]
+        try:
+            centres=response.json()['centers']
+        except KeyError:
+            print("No such ")
         
         if len(centres)==0:
             print("nothing to notify..no slots available")
