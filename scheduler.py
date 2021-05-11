@@ -45,7 +45,7 @@ def cron_job():
         })
         if response.status_code != 200:
             print("Invalid response")
-            return
+            continue
         print(response.json())
         centres=[]
         try:
