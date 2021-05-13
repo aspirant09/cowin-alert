@@ -26,8 +26,8 @@ def cron_job():
         temp_user={
             "mail":row[2],
             "pin":row[3],
-            "district":row[4],
-            "state":row[5]
+            "state":row[4],
+            "district":row[5]
         }
         usersData.append(temp_user)
     print("#####USER DATA######",usersData)
