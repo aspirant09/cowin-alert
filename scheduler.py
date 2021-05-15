@@ -77,5 +77,5 @@ def cron_job():
     
 
 cron_job()
-sched.add_job(cron_job, 'interval', minutes=30)
+sched.add_job(cron_job, 'interval', minutes=5)
 sched.start()
