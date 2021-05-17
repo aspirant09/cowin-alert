@@ -27,7 +27,8 @@ def cron_job():
             "mail":row[2],
             "pin":row[3],
             "state":row[4],
-            "district":row[5]
+            "district":row[5],
+            "age":row[7]
         }
         usersData.append(temp_user)
     print("#####USER DATA######",usersData)
@@ -59,7 +60,7 @@ def cron_job():
             for centre in centres:
                 sessions=centre['sessions']
                 for session in sessions:
-                    if session['available_capacity']>0:
+                    if session['available_capacity']>0 and session['min_age_limit']==user['age']:
                         centre_names.append(centre['name'])
         Content=""
         count=0
